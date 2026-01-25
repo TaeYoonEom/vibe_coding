@@ -7,9 +7,19 @@
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>로또 번호 생성기</h1>
-  <button id="generate-lotto-btn">번호 생성</button>
-  <div id="lotto-numbers"></div>
+  <header>
+    <h1>로또 번호 생성기</h1>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+  </header>
+  <main>
+    <button id="generate-lotto-btn">번호 생성</button>
+    <div id="lotto-numbers"></div>
+  </main>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
