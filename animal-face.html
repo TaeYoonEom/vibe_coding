@@ -19,9 +19,12 @@
   </header>
   <main>
     <div class="tm-container">
-      <p>버튼을 누르면 웹캠이 실행됩니다.</p>
-      <button type="button" onclick="init()" class="start-btn">시작</button>
-      <div id="webcam-container"></div>
+      <p>강아지상? 고양이상? 사진으로 확인해보세요!</p>
+      <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
+      <button type="button" id="image-upload-button" class="start-btn">이미지 업로드</button>
+      <div id="image-preview-container">
+        <img id="image-preview" src="" alt="Image preview" style="display:none; max-width: 100%; border-radius: 15px;"/>
+      </div>
       <div id="label-container"></div>
     </div>
     <a href="/" class="home-link">홈으로 돌아가기</a>
@@ -32,41 +35,44 @@
   <script defer type="text/javascript" src="/main.js"></script>
   <script type="text/javascript">
       const URL = "https://teachablemachine.withgoogle.com/models/tG8zB7JS6/";
+      let model, labelContainer, maxPredictions;
 
-      let model, webcam, labelContainer, maxPredictions;
+      const uploadButton = document.getElementById("image-upload-button");
+      const uploadInput = document.getElementById("image-upload-input");
+      const preview = document.getElementById("image-preview");
 
       async function init() {
           const modelURL = URL + "model.json";
           const metadataURL = URL + "metadata.json";
-
+          
           model = await tmImage.load(modelURL, metadataURL);
           maxPredictions = model.getTotalClasses();
 
-          const flip = true;
-          webcam = new tmImage.Webcam(300, 300, flip);
-          await webcam.setup();
-          await webcam.play();
-          window.requestAnimationFrame(loop);
-
-          document.getElementById("webcam-container").appendChild(webcam.canvas);
           labelContainer = document.getElementById("label-container");
           for (let i = 0; i < maxPredictions; i++) {
               labelContainer.appendChild(document.createElement("div"));
           }
-          
-          // Hide the start button and initial message after starting
-          document.querySelector('.start-btn').style.display = 'none';
-          document.querySelector('.tm-container p').style.display = 'none';
       }
 
-      async function loop() {
-          webcam.update();
-          await predict();
-          window.requestAnimationFrame(loop);
-      }
+      init(); // Load the model automatically
 
-      async function predict() {
-          const prediction = await model.predict(webcam.canvas);
+      uploadButton.addEventListener("click", () => uploadInput.click());
+
+      uploadInput.addEventListener("change", async (event) => {
+          const file = event.target.files[0];
+          if (file) {
+              const reader = new FileReader();
+              reader.onload = async (e) => {
+                  preview.src = e.target.result;
+                  preview.style.display = "block";
+                  await predict(preview);
+              };
+              reader.readAsDataURL(file);
+          }
+      });
+
+      async function predict(imageElement) {
+          const prediction = await model.predict(imageElement);
           for (let i = 0; i < maxPredictions; i++) {
               const classPrediction =
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);

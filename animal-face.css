@@ -28,10 +28,12 @@ body.dark-mode .tm-container p {
   /* Uses the global button style */
 }
 
-#webcam-container {
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px var(--shadow-color);
+#image-preview-container {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #label-container {
