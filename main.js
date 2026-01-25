@@ -13,23 +13,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function displayLottoNumbers() {
-    lottoNumbersDiv.innerHTML = ''; // Clear previous numbers
-    const lottoNumbers = generateUniqueRandomNumbers(1, 45, 6);
-    lottoNumbers.forEach(number => {
-      const numberElement = document.createElement('p');
-      numberElement.textContent = number;
-      lottoNumbersDiv.appendChild(numberElement);
-    });
+    if (lottoNumbersDiv) {
+      lottoNumbersDiv.innerHTML = ''; // Clear previous numbers
+      const lottoNumbers = generateUniqueRandomNumbers(1, 45, 6);
+      lottoNumbers.forEach(number => {
+        const numberElement = document.createElement('p');
+        numberElement.textContent = number;
+        lottoNumbersDiv.appendChild(numberElement);
+      });
+    }
   }
 
   // Theme switcher
-  themeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-  });
+  if (themeSwitch) {
+    themeSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  }
 
-  // Generate numbers on initial load
-  displayLottoNumbers();
-
-  // Generate numbers on button click
-  generateBtn.addEventListener('click', displayLottoNumbers);
+  // Lotto number generation
+  if (generateBtn && lottoNumbersDiv) {
+    // Generate numbers on initial load
+    displayLottoNumbers();
+    // Generate numbers on button click
+    generateBtn.addEventListener('click', displayLottoNumbers);
+  }
 });
