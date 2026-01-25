@@ -203,3 +203,10 @@ body.dark-mode .contact-form textarea {
 .contact-form button {
   align-self: center;
 }
+
+.disqus-section {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px;
+}
+
