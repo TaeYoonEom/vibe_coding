@@ -21,56 +21,27 @@
     </div>
   </header>
   <main>
-    <div class="content-container" style="text-align: center;">
-        <h2>재미있는 웹 도구</h2>
-        <p>Vibe Coding은 일상에 소소한 재미와 편리함을 더하는 웹 기반 도구들을 제공합니다. AI 동물상 테스트, 로또 번호 생성기 등 다양한 기능을 탐색해보세요!</p>
+    <div class="hero-section">
+      <h1>일상에 즐거운 영감을, Vibe Coding</h1>
+      <p>AI 기술을 활용한 재미있는 도구들을 만나보세요. 당신의 하루가 조금 더 특별해질 수 있습니다.</p>
     </div>
-    <section class="tool-section">
-      <h2>로또 번호 생성기</h2>
-      <button id="generate-lotto-btn">번호 생성</button>
-      <div id="lotto-numbers"></div>
-    </section>
-    <section class="tool-section">
-        <h2>AI 동물상 테스트</h2>
-        <p>AI가 당신의 얼굴을 분석하여 강아지상인지, 고양이상인지 알려드립니다.</p>
-        <a href="/animal-face.html" class="button-link">테스트 하러가기</a>
-    </section>
-    <section class="contact-form">
-      <h2>제휴 문의</h2>
-      <form action="https://formspree.io/f/xbdoronp" method="POST">
-        <label>
-          이메일:
-          <input type="email" name="email">
-        </label>
-        <label>
-          문의 내용:
-          <textarea name="message"></textarea>
-        </label>
-        <button type="submit">보내기</button>
-      </form>
-    </section>
-    <section class="disqus-section">
-      <h2>댓글</h2>
-      <div id="disqus_thread"></div>
-      <script>
-          /**
-          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-          /*
-          var disqus_config = function () {
-          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-          };
-          */
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://productbuilder-dpurshwjqx.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
+    <div class="card-container">
+      <div class="tool-card">
+        <h3>AI 동물상 테스트</h3>
+        <p>인공지능이 당신의 얼굴을 분석해 강아지상인지, 고양이상인지 알려드립니다. 친구들과 함께 누가 더 닮았는지 확인해보세요!</p>
+        <a href="/animal-face.html" class="button-link">테스트 시작하기</a>
+      </div>
+      <div class="tool-card">
+        <h3>로또 번호 생성기</h3>
+        <p>단순한 무작위 생성을 넘어, 로또의 역사와 확률에 대한 흥미로운 이야기와 함께 행운의 번호를 받아보세요.</p>
+        <a href="/lotto-generator.html" class="button-link">번호 생성하기</a>
+      </div>
+      <div class="tool-card">
+        <h3>저녁 메뉴 추천기</h3>
+        <p>"오늘 뭐 먹지?"라는 고민을 해결해 드립니다. 선택의 역설에서 벗어나 맛있는 저녁 메뉴를 추천받아보세요.</p>
+        <a href="/dinner-recommender.html" class="button-link">메뉴 추천받기</a>
+      </div>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="footer-content">

@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="AI가 당신의 얼굴 사진을 분석하여 강아지상인지 고양이상인지 알려드립니다. Teachable Machine을 활용한 재미있는 동물상 테스트를 지금 바로 경험해보세요.">
   <meta name="google-adsense-account" content="ca-pub-1349972120125562">
-  <title>동물상 테스트 - Vibe Coding</title>
+  <title>AI 동물상 테스트 - Vibe Coding</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1349972120125562"
      crossorigin="anonymous"></script>
   <link href='/style.css' rel='stylesheet'>
   <link href='/animal-face.css' rel='stylesheet'>
+  <link href='/articles.css' rel='stylesheet'>
 </head>
 <body>
   <header>
@@ -22,15 +23,45 @@
     </div>
   </header>
   <main>
-    <div class="tm-container">
-      <p>강아지상? 고양이상? 사진으로 확인해보세요!</p>
-      <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
-      <button type="button" id="image-upload-button" class="start-btn">이미지 업로드</button>
-      <div id="image-preview-container">
-        <img id="image-preview" src="" alt="Image preview" style="display:none; max-width: 100%; border-radius: 15px;"/>
-      </div>
-      <div id="label-container"></div>
-    </div>
+    <article class="content-container">
+      <header class="article-header">
+        <h1>AI 동물상 테스트: 나는 강아지상일까, 고양이상일까?</h1>
+        <p class="subtitle">최신 인공지능 기술로 당신의 얼굴에 숨겨진 동물을 찾아보세요.</p>
+      </header>
+
+      <section>
+        <h2>AI로 확인하는 나의 동물상</h2>
+        <div class="tool-section">
+          <p>강아지상? 고양이상? 사진으로 확인해보세요!</p>
+          <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
+          <button type="button" id="image-upload-button" class="start-btn">이미지 업로드</button>
+          <div id="image-preview-container">
+            <img id="image-preview" src="" alt="Image preview" style="display:none; max-width: 100%; border-radius: 15px;"/>
+          </div>
+          <div id="label-container"></div>
+        </div>
+        <p class="small-text">※ 사진은 서버에 저장되지 않으며, 분석은 사용자의 브라우저 내에서만 이루어집니다.</p>
+      </section>
+
+      <section>
+        <h2>'동물상', 과학일까 문화일까?</h2>
+        <p>사람의 얼굴을 보고 특정 동물을 떠올리는 '동물상'은 과학적 근거가 있는 분류법은 아닙니다. 하지만 오랜 시간 동안 형성된 문화적인 관상(Physiognomy)의 한 형태로, 특정 인상과 성격을 연결 짓는 재미있는 방법으로 여겨져 왔습니다.</p>
+        <ul>
+          <li><strong>강아지상:</strong> 선하고 동그란 눈매, 처진 눈꼬리, 부드러운 인상이 특징입니다. 일반적으로 다정하고 사교적이며, 사람을 잘 따르는 성격과 연관됩니다.</li>
+          <li><strong>고양이상:</strong> 날카롭고 올라간 눈매, 갸름한 턱선, 도도하고 시크한 인상이 특징입니다. 독립적이고 신비로우며, 때로는 까칠하지만 매력적인 '츤데레' 성격으로 묘사되곤 합니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>어떻게 AI는 동물상을 구별할까요?</h2>
+        <p>이 테스트는 Google의 'Teachable Machine'이라는 도구를 사용하여 만들어진 이미지 분류 모델을 기반으로 합니다. 수백 장의 '강아지상' 연예인 사진과 '고양이상' 연예인 사진을 AI에게 학습시킨 후, AI가 두 그룹의 특징적인 차이점을 스스로 학습하게 한 것입니다.</p>
+        <blockquote>
+          "컴퓨터 비전(Computer Vision) 기술은 기계가 인간처럼 '보는' 법을 배우게 하는 인공지능의 한 분야입니다."
+        </blockquote>
+        <p>사용자가 이미지를 업로드하면, AI 모델은 학습된 데이터를 바탕으로 이미지의 얼굴 특징(눈, 코, 입, 얼굴형 등)을 분석하고, '강아지상'과 '고양이상' 중 어느 쪽에 더 가까운지 확률적으로 계산하여 결과를 보여줍니다. 이 모든 과정은 사용자의 웹 브라우저 내에서 실시간으로 이루어지며, 여러분의 소중한 사진은 외부 서버로 전송되지 않으니 안심하고 이용하셔도 좋습니다.</p>
+        <p class="important-notice"><strong>주의:</strong> 본 테스트는 과학적 정확성을 보장하지 않으며, 오직 재미를 위한 목적으로만 사용해주시기 바랍니다.</p>
+      </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="footer-content">

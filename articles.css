@@ -1,0 +1,69 @@
+.article-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+body.dark-mode .article-header {
+  border-bottom-color: #333;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.article-header .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+body.dark-mode .article-header .subtitle {
+  color: #aaa;
+}
+
+.content-container section {
+  margin-bottom: 40px;
+}
+
+.content-container section h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin-left: 0;
+  font-style: italic;
+  color: #666;
+}
+
+body.dark-mode blockquote {
+  color: #aaa;
+}
+
+.lotto-tool {
+  gap: 20px;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.important-notice {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+body.dark-mode .important-notice {
+  background-color: #3b3a30;
+  border-color: #a89359;
+}

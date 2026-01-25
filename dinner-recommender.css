@@ -1,0 +1,71 @@
+.dinner-tool {
+  text-align: center;
+}
+
+#dinner-recommendation {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#dinner-recommendation .menu-item {
+  margin: 0;
+}
+
+#dinner-options-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#dinner-options-list li {
+  background-color: var(--background-color-light);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+body.dark-mode #dinner-options-list li {
+  background-color: var(--background-color-dark);
+  border-color: #444;
+}
+
+/* Animations */
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#dinner-recommendation.animate-out {
+  animation: fadeOutUp 0.5s ease-out forwards;
+}
+
+#dinner-recommendation.animate-in {
+  animation: fadeInDown 0.5s ease-in forwards;
+}
