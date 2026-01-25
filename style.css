@@ -45,6 +45,22 @@ h1 {
   margin: 0;
 }
 
+.nav-link {
+  font-weight: bold;
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.dark-mode .nav-link {
+  color: var(--text-color-dark);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+
 main {
   display: flex;
   flex-direction: column;
