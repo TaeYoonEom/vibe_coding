@@ -32,12 +32,20 @@ body.dark-mode {
 header {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 40px;
   position: absolute;
   top: 0;
+  box-sizing: border-box;
 }
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 
 h1 {
   font-size: 2rem;

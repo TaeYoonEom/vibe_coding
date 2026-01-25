@@ -1,0 +1,46 @@
+.tm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--card-bg-color-light);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .tm-container {
+  background-color: var(--card-bg-color-dark);
+}
+
+.tm-container p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--text-color-light);
+}
+
+body.dark-mode .tm-container p {
+  color: var(--text-color-dark);
+}
+
+.start-btn {
+  /* Uses the global button style */
+}
+
+#webcam-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+#label-container {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
